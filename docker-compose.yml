@@ -1,0 +1,26 @@
+version: "3.8"
+
+x-dev-base: &dev-base
+  build:
+    context: .
+    dockerfile: ./docker/node/Dockerfile
+  volumes:
+    - .:/app
+    - /app/node_modules
+    - /app/packages/frontend/node_modules
+
+services:
+  # frontend
+  frontend: 
+    << : *dev-base
+    working_dir: /app/packages/frontend
+    command: yarn dev
+    stdin_open: true
+    tty: true
+    # depends_on:
+    #   - backend
+    ports:
+      - 3000:3000
+
+volumes:
+  mysql-data:
