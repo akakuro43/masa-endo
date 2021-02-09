@@ -1,0 +1,54 @@
+
+// foundation
+@import '../foundation/_index.sass'
+
+.pKeyVisual
+  @apply w-full h-80 relative
+  .contents
+    +fitParent()
+    @apply z-10 flex flex-col justify-center
+    .siteName
+      +setEn
+      @apply text-center
+      color: $off-white
+      font-size: 40px
+    .siteTheme
+      +setEn
+      @apply text-center font-medium
+      color: $gray
+  .bg
+    +fitParent()
+    +setBgCover('/images/pc/top/bg_kv.jpg')
+    @apply z-0
+
+.pArticle
+  @apply py-32
+  .articleList
+    position: relative
+    @apply flex flex-wrap
+    .articleItem
+      position: relative
+      width: 320px
+      &:not(:nth-child(3n))
+        @apply mr-10
+      &:nth-child(n+4)
+        @apply mt-14
+      .thumb
+        +setBgCoverNone()
+        @apply rounded
+        width: 100%
+        height: 200px
+      .contents
+        .ttl
+          +setFont(22px,1.33,12px,14px)
+          @apply font-bold
+          color: $off-white
+        .description
+          +setFont(15px,1.5,20px)
+          @apply font-medium
+          color: $gray
+        // .dateList
+        //   .dateItem
+        //     .date
+        //       color: #333
+
