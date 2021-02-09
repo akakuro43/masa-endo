@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Header from '../modules/components/header'
+import Footer from '../modules/components/footer'
 
 export default function Home({ blog }) {
 
@@ -55,6 +56,7 @@ export default function Home({ blog }) {
           </ul>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
