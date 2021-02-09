@@ -1,6 +1,8 @@
 import styles from '../styles/pages/Home.module.sass'
 import Head from 'next/head'
-import Link from 'next/link';
+import Link from 'next/link'
+
+import Header from '../modules/components/header'
 
 export default function Home({ blog }) {
 
@@ -14,6 +16,7 @@ export default function Home({ blog }) {
          <title>Create Next App</title>
          <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <section className={styles.pKeyVisual}>
         <div className={styles.contents}>
           <h1 className={styles.siteName}>Masa-Endo</h1>
@@ -22,7 +25,7 @@ export default function Home({ blog }) {
         <div className={styles.bg}></div>
       </section>
       <section className={styles.pArticle}>
-        <div className="lInner">
+        <div className="sInner">
           <ul className={styles.articleList}>
           {blog.map(blog => (
             <li className={styles.articleItem} key={blog.id}>

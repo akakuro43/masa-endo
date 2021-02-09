@@ -1,0 +1,25 @@
+
+// foundation
+@import '../../foundation/_index.sass'
+
+.cHeader
+  @apply fixed z-50 w-full flex items-center
+  height: 64px
+  
+  .bg
+    +fitParent
+    background-color: $bg-dark1
+    opacity: 0
+  .navList
+    @apply flex
+    .navItem
+      @apply mr-5
+      .navLink
+        +setEn
+        font-size: 13px
+        color: $light-gray
+        @apply py-2.5 opacity-40
+      &.isCurrent
+        .navLink
+          @apply opacity-100
+          
