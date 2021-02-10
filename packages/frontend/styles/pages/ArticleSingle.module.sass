@@ -18,17 +18,17 @@
       +setFont(48px,1.25,32px,32px)
       color: $off-white
     .description
-      @apply font-medium tracking-wide
+      @apply font-medium tracking-wide opacity-60
       +setFont(18px,1.75,24px)
-      color: $gray 
+      color: $gray
     .dates
       @apply flex mt-5
       .createDate,
       .updateDate
         +setEn
-        font-size: 12px
+        font-size: 14px
         color: $gray
-        @apply font-medium flex items-center
+        @apply font-medium flex items-center opacity-60
         svg
           @apply mr-1
       .updateDate
@@ -45,7 +45,7 @@
     p
       @apply font-medium tracking-wide
       +setFont(20px,1.75,32px,32px)
-      color: $gray-txt
+      color: $gray
       img
         @apply w-full mt-8
       a
@@ -59,7 +59,7 @@
       li
         @apply font-medium tracking-wide relative
         +setFont(20px,1.5,16px,16px)
-        color: $gray-txt
+        color: $gray
         padding-left: 32px
         &::before
           @apply absolute
@@ -68,7 +68,7 @@
           content: ''
           width: 5px
           height: 5px
-          background-color: $gray-txt
+          background-color: $gray
           border-radius: 50%
   .articleFooter
     @apply mt-16
