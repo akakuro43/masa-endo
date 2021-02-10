@@ -1,0 +1,138 @@
+
+// foundation
+@import '../foundation/_index.sass'
+.pArticle
+  @apply pt-36 pb-20
+  .articleHeader
+    @apply relative
+    .tagList
+      @apply flex
+      .tagItem
+        @apply mr-4
+        .tagTxt
+          @apply font-bold
+          font-size: 13px
+          color: $key-color
+    .ttl
+      @apply font-bold tracking-wide
+      +setFont(48px,1.25,32px,32px)
+      color: $off-white
+    .description
+      @apply font-medium tracking-wide
+      +setFont(18px,1.75,24px)
+      color: $gray 
+    .dates
+      @apply flex mt-5
+      .createDate,
+      .updateDate
+        +setEn
+        font-size: 12px
+        color: $gray
+        @apply font-medium flex items-center
+        svg
+          @apply mr-1
+      .updateDate
+        @apply ml-3
+    .thumb
+      @apply mt-14 mb-20
+      width: calc(100% + 340px)
+      margin-left: -170px
+  .articleBody
+    h2
+      @apply font-bold tracking-wide
+      +setFont(32px,1.25,32px,72px)
+      color: $off-white
+    p
+      @apply font-medium tracking-wide
+      +setFont(20px,1.75,32px,32px)
+      color: $gray-txt
+      img
+        @apply w-full mt-8
+      a
+        @apply underline
+        color: $off-white
+      strong
+        color: $off-white
+
+    ul
+      @apply my-8
+      li
+        @apply font-medium tracking-wide relative
+        +setFont(20px,1.5,16px,16px)
+        color: $gray-txt
+        padding-left: 32px
+        &::before
+          @apply absolute
+          top: 13px
+          left: 13px
+          content: ''
+          width: 5px
+          height: 5px
+          background-color: $gray-txt
+          border-radius: 50%
+  .articleFooter
+    @apply mt-16
+    .share
+      @apply w-full h-20 relative z-20 rounded-md
+      background-color: $bg-dark3
+
+
+// .pKeyVisual
+//   @apply w-full relative
+//   height: 360px
+//   .contents
+//     +fitParent()
+//     @apply z-10 flex flex-col justify-center
+//     .siteName
+//       +setEn
+//       @apply text-center
+//       color: $off-white
+//       font-size: 40px
+//     .siteTheme
+//       +setEn
+//       @apply text-center font-medium
+//       color: $gray
+//   .bg
+//     +fitParent()
+//     +setBgCover('/images/pc/top/bg_kv.jpg')
+//     @apply z-0
+
+// .pArticle
+//   @apply py-28
+//   .articleList
+//     position: relative
+//     @apply flex flex-wrap
+//     .articleItem
+//       position: relative
+//       width: 320px
+//       &:not(:nth-child(3n))
+//         @apply mr-10
+//       &:nth-child(n+4)
+//         @apply mt-14
+//       .thumb
+//         +setBgCover()
+//         @apply rounded
+//         width: 100%
+//         height: 200px
+//       .contents
+//         .ttl
+//           +setFont(21px,1.33,12px,14px)
+//           @apply font-bold tracking-wide
+//           color: $off-white 
+//         .description
+//           +setFont(15px,1.5)
+//           @apply font-medium
+//           color: $gray
+//       .dates
+//         @apply flex mt-5
+//         .createDate,
+//         .updateDate
+//           +setEn
+//           font-size: 12px
+//           color: $gray
+//           @apply font-medium flex items-center
+//           svg
+//             @apply mr-1
+//         .updateDate
+//           @apply ml-3
+
