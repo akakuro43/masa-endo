@@ -1,0 +1,55 @@
+
+// foundation
+@import '../foundation/_index.sass'
+.pArticle
+  position: inherit
+  .tagTxt
+    font-size: 13px
+  .ttl
+    +setFont(48px,1.25,32px,32px)
+  .description
+    +setFont(18px,1.75,24px)
+  .createDate,
+  .updateDate
+    +setEn
+    font-size: 14px
+    svg
+      @apply mr-1
+  .thumb
+    width: calc(100% + 340px)
+    margin-left: -170px
+  .articleBody
+    h2
+      @apply font-bold tracking-wide
+      +setFont(32px,1.25,32px,72px)
+      color: $off-white
+    p
+      @apply font-medium tracking-wide
+      +setFont(20px,1.75,32px,32px)
+      color: $gray
+      img
+        @apply w-full mt-8
+      a
+        @apply underline
+        color: $off-white
+      strong
+        color: $off-white
+
+    ul
+      @apply my-8
+      li
+        @apply font-medium tracking-wide relative
+        +setFont(20px,1.5,16px,16px)
+        color: $gray
+        padding-left: 32px
+        &::before
+          @apply absolute
+          top: 13px
+          left: 13px
+          content: ''
+          width: 5px
+          height: 5px
+          background-color: $gray
+          border-radius: 50%
+
+
