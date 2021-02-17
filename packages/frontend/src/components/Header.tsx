@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import s from '../styles/components/Header.module.sass'
+import s from '../sass/modules/layouts/Header.module.sass'
 
 const navItems = [
   {name: 'HOME', url: '/'},
@@ -9,9 +9,9 @@ const navItems = [
 const stateCurrent = '/'
 
 const Header = () => (
-  <header className={`${s.cHeader} fixed z-50 w-full flex items-center`}>
-    <div className={`${s.bg} bg-dark1 p-fitParent`}></div>
-    <div className="sInner">
+  <header className={`${s.lHeader} fixed z-50 w-full flex items-center`}>
+    <div className={`${s.bg} bg-dark1 u-fitParent`}></div>
+    <div className="p-inner">
       <ul className="flex">
       {navItems.map(nav => (
         <li className={`${s.navItem} opacity-40 mr-5 ${stateCurrent == nav.url ? s.isCurrent : ''}`}>

@@ -1,4 +1,4 @@
-import s from '../../styles/pages/ArticleSingle.module.sass'
+import s from '~/sass/modules/pages/ArticleSingle.module.sass'
 import Head from 'next/head'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -14,8 +14,8 @@ export default function ArtivleId({ article }) {
          <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <section className={`${s.sArticle} pt-36 pb-20`}>
-        <div className="sInnerSlim">
+      <section className={`${s.pArticle} pt-36 pb-20`}>
+        <div className="p-innerSlim">
           <div className={`relative`}>
             <ul className={`flex`}>
               <li className={`mr-4`}>
