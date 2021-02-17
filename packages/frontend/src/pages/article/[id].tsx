@@ -14,7 +14,7 @@ export default function ArtivleId({ article }) {
          <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <section className={`${s.pArticle} pt-36 pb-20`}>
+      <section className={`${s.sArticle} pt-36 pb-20`}>
         <div className="sInnerSlim">
           <div className={`relative`}>
             <ul className={`flex`}>
