@@ -3,29 +3,18 @@
 @import '../../variables/_index.sass'
 
 .pKeyVisual
-  height: 360px
-  .siteName
-    font-size: 40px    
   .bg
     +setBgCover('/images/pc/top/bg_kv.jpg')
 .pArticle
   .articleItem
-    width: 320px
     &:not(:nth-child(3n))
       @apply mr-10
     &:nth-child(n+4)
       @apply mt-14
     .thumb
       +setBgCover()
-      width: 100%
-      height: 200px
     .ttl
       +setFont(21px,1.33,12px,14px)
     .description
       +setFont(15px,1.5)
-    .createDate,
-    .updateDate
-      font-size: 13px
-      svg
-        @apply mr-1
 

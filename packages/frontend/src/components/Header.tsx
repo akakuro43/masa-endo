@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import s from '../sass/modules/layouts/Header.module.sass'
+// import s from '../sass/modules/layouts/Header.module.sass'
 
 const navItems = [
   {name: 'HOME', url: '/'},
@@ -9,14 +9,14 @@ const navItems = [
 const stateCurrent = '/'
 
 const Header = () => (
-  <header className={`${s.lHeader} fixed z-50 w-full flex items-center`}>
-    <div className={`${s.bg} bg-dark1 u-fitParent`}></div>
-    <div className="p-inner">
+  <header className={`h-64px fixed z-50 w-full flex items-center`}>
+    <div className={`opacity-0 bg-dark1 inset-0 absoluteolute`}></div>
+    <div className="pj-inner">
       <ul className="flex">
       {navItems.map(nav => (
-        <li className={`${s.navItem} opacity-40 mr-5 ${stateCurrent == nav.url ? s.isCurrent : ''}`}>
+        <li className={`opacity-40 mr-5 ${stateCurrent == nav.url ? 'opacity-100' : ''}`}>
           <Link href={`${nav.url}`}>
-            <a className={`${s.navLink} py-2.5 font-bold text-light-gray`}>{nav.name}</a>
+            <a className={`text-13px py-2.5 font-bold text-light-gray md:hover:text-key-color`}>{nav.name}</a>
           </Link>
         </li>
       ))}

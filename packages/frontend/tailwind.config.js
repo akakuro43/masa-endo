@@ -1,3 +1,8 @@
+const height = require('./src/modules/styles/height')
+const width = require('./src/modules/styles/width')
+const fontSize = require('./src/modules/styles/fontSize')
+const colors = require('./src/modules/styles/colors')
+const fontFamily = require('./src/modules/styles/fontFamily')
 
 module.exports = {
   future: {
@@ -6,15 +11,13 @@ module.exports = {
   },
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      'off-white': '#F2F2E9',
-      'gray': '#a5a59f',
-      'light-gray': '#DBDBD6',
-      'key-color': '#1B90D2',
-      'dark1': '#151515',
-      'dark2': '#232425',
-      'dark3': '#333435',
-    },
+    colors,
+    fontFamily,
+    fontSize,
+    extend: {
+      height,
+      width,
+    }
   },
   variants: {},
   plugins: [],
