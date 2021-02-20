@@ -14,7 +14,7 @@ const Header = () => (
     <div className="pj-inner">
       <ul className="flex">
       {navItems.map(nav => (
-        <li className={`opacity-40 mr-5 ${stateCurrent == nav.url ? 'opacity-100' : ''}`}>
+        <li key={nav.name} className={`opacity-40 mr-5 ${stateCurrent == nav.url ? 'opacity-100' : ''}`}>
           <Link href={`${nav.url}`}>
             <a className={`text-13px py-2.5 font-bold text-light-gray md:hover:text-key-color`}>{nav.name}</a>
           </Link>

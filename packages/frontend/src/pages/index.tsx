@@ -2,11 +2,11 @@ import React from 'react'
 // import { NextPage } from 'next'
 
 import s from '~/sass/modules/pages/Home.module.sass'
-import { Head } from '~/components/utils/Head'
+import { Head } from '../components/utils/Head'
 import Link from 'next/link'
 
-import Header from '~/components/Header'
-import Footer from '~/components/Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function Home({ article }) {
 
@@ -30,7 +30,7 @@ export default function Home({ article }) {
           <ul className={`flex flex-wrap relative`}>
            {article.map(article => (
             <li className={`${s.articleItem} w-320px relative`} key={article.id}>
-              <Link href={`article/${article.id}`}>
+              <Link href={`/article/${article.id}`}>
                 <a>
                 <div className={`${s.thumb} w-full h-200px rounded`} style={{backgroundImage: 'url(' + `${article.thumb.url}` + ')'}}></div>
                 <div className={s.contents}>
