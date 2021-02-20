@@ -1,5 +1,5 @@
 // インクリメントによる自動設定
-const MIN             = -10 // 最小値
+const MIN             = -12 // 最小値
 const MAX             = 400 // 最大値
 const INCREMENTS_NUM  = 1   // インクリメント
 let incrementsObj = createIncrementsObj()
@@ -17,10 +17,8 @@ function createIncrementsObj() {
   let obj = {}
   let i = MIN
   while(MAX >= i) {
-    if(i % INCREMENTS_NUM == 0) {
-      obj[`${i}px`]  = `${i}px`
-    } 
-    i++
+    obj[`${i}px`]  = `${i}px`
+    i = i + INCREMENTS_NUM
   }
   return obj
 }

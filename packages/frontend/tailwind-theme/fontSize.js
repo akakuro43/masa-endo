@@ -7,11 +7,7 @@ let fontSize = {}
 let i = MIN_SIZE
 
 while(MAX_SIZE >= i) {
-  if(i % INCREMENTS_NUM == 0) {
-    let key = `${i}px`
-    let val = `${i}px`
-    fontSize[key] = val;
-  } 
-  i++
+  fontSize[`${i}px`] = `${i}px`
+  i = i + INCREMENTS_NUM
 }
 module.exports = fontSize

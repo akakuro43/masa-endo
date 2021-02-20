@@ -6,15 +6,12 @@
   .bg
     +setBgCover('/images/pc/top/bg_kv.jpg')
 .pArticle
-  .articleItem
-    &:not(:nth-child(3n))
-      @apply mr-40px
-    &:nth-child(n+4)
-      @apply mt-56px
-    .thumb
-      +setBgCover()
-    .ttl
-      +setFont(21px,1.33,12px,14px)
-    .description
-      +setFont(15px,1.5)
+  .articleList
+    .item
+      &:not(:nth-child(3n))
+        @apply mr-40px
+      &:nth-child(n+4)
+        @apply mt-56px
+      .thumb
+        +setBgCover()
 

@@ -47,12 +47,8 @@ function createIncrementsObj() {
   let obj = {}
   let i = MIN_WIDTH
   while(MAX_WIDTH >= i) {
-    if(i % INCREMENTS_NUM == 0) {
-      let key = `${i}px`
-      let val = `${i}px`
-      obj[key] = val
-    } 
-    i++
+    obj[`${i}px`] =`${i}px`
+    i = i + INCREMENTS_NUM
   }
   return obj
 }

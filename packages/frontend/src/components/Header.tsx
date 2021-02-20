@@ -10,13 +10,13 @@ const stateCurrent = '/'
 
 const Header = () => (
   <header className={`h-64px fixed z-50 w-full flex items-center`}>
-    <div className={`opacity-0 bg-dark1 inset-0 absoluteolute`}></div>
+    <div className={`opacity-0 bg-dark1 inset-0 absolute`}></div>
     <div className="pj-inner">
       <ul className="flex">
       {navItems.map(nav => (
         <li key={nav.name} className={`opacity-40 mr-20px ${stateCurrent == nav.url ? 'opacity-100' : ''}`}>
           <Link href={`${nav.url}`}>
-            <a className={`text-13px py-10px font-bold text-light-gray md:hover:text-key-color`}>{nav.name}</a>
+            <a className={`text-13px py-10px font-bold text-light-gray`}>{nav.name}</a>
           </Link>
         </li>
       ))}

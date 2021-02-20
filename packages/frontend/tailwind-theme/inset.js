@@ -17,10 +17,8 @@ function createIncrementsObj() {
   let obj = {}
   let i = MIN
   while(MAX >= i) {
-    if(i % INCREMENTS_NUM == 0) {
-      obj[`${i}px`]  = `${i}px`
-    } 
-    i++
+    obj[`${i}px`]  = `${i}px` 
+    i = i + INCREMENTS_NUM
   }
   return obj
 }
