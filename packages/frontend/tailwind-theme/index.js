@@ -8,6 +8,7 @@ const padding = require('./padding')
 const inset = require('./inset')
 const lineHeight = require('./lineHeight')
 const borderRadius = require('./borderRadius')
+const screens = require('./screens')
 
 
 module.exports = {
@@ -21,5 +22,6 @@ module.exports = {
   inset,
   lineHeight,
   borderRadius,
+  screens,
   extend: {}
 }

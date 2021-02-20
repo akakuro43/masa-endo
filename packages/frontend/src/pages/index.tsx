@@ -28,7 +28,7 @@ export default function Home({ article }) {
       <section className={`${s.pArticle} py-112px`}>
         <div className="pj-inner">
           <ul className={`${s.articleList}  flex flex-wrap relative`}>
-           {article.map((article,index) => (
+           {article.map((article) => (
             <li className={`${s.item} w-320px relative`} key={article.id}>
               <Link href={`/article/${article.id}`}>
                 <a>
