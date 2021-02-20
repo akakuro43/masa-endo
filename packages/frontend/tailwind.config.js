@@ -1,27 +1,14 @@
 const height = require('./src/modules/styles/height')
 const width = require('./src/modules/styles/width')
+const margin = require('./src/modules/styles/margin')
+const padding = require('./src/modules/styles/padding')
+const inset = require('./src/modules/styles/inset')
 const fontSize = require('./src/modules/styles/fontSize')
 const colors = require('./src/modules/styles/colors')
 const fontFamily = require('./src/modules/styles/fontFamily')
 
 module.exports = {
-  // future: {
-  //   removeDeprecatedGapUtilities: true,
-  //   purgeLayersByDefault: true,
-  // },
-  // purge: {
-  //   enabled: true,
-  //   preserveHtmlElements: false,
-  //   layers: ["components", "utilities"],
-  //   content: ['**/*.{js,ts,jsx,tsx,sass}'],
-  //   options: {
-  //     safelist: ["dark"],
-  //   },
-  // },
-    
-  // purge: ['./pages/**/*.tsx'],
   purge: {
-    // Specify the paths to all of the template files in your project
     content: [
       './src/components/**/*.tsx',
       './src/pages/**/*.tsx',
@@ -36,10 +23,12 @@ module.exports = {
     colors,
     fontFamily,
     fontSize,
-    extend: {
-      height,
-      width,
-    }
+    margin,
+    padding,
+    width,
+    height,
+    inset,
+    extend: {}
   },
   variants: {},
   plugins: [],

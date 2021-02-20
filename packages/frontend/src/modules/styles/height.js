@@ -1,62 +1,31 @@
-module.exports = {
-  '1px': '1px',
-  '2px': '2px',
-  '3px': '3px',
-  '4px': '4px',
-  '5px': '5px',
-  '6px': '6px',
-  '7px': '7px',
-  '8px': '8px',
-  '9px': '9px',
-  '10px': '10px',
-  '12px': '12px',
-  '16px': '16px',
-  '20px': '20px',
-  '24px': '24px',
-  '28px': '28px',
-  '32px': '32px',
-  '36px': '36px',
-  '40px': '40px',
-  '44px': '44px',
-  '48px': '48px',
-  '52px': '52px',
-  '56px': '56px',
-  '60px': '60px',
-  '64px': '64px',
-  '68px': '68px',
-  '72px': '72px',
-  '76px': '76px',
-  '80px': '80px',
-  '84px': '84px',
-  '88px': '88px',
-  '92px': '92px',
-  '96px': '96px',
-  '100px': '100px',
-  '104px': '104px',
-  '108px': '108px',
-  '112px': '112px',
-  '116px': '116px',
-  '120px': '120px',
-  '124px': '124px',
-  '128px': '128px',
-  '132px': '132px',
-  '136px': '136px',
-  '140px': '140px',
-  '144px': '144px',
-  '148px': '148px',
-  '152px': '152px',
-  '156px': '156px',
-  '160px': '160px',
-  '164px': '164px',
-  '168px': '168px',
-  '172px': '172px',
-  '176px': '176px',
-  '180px': '180px',
-  '184px': '184px',
-  '188px': '188px',
-  '192px': '192px',
-  '196px': '196px',
-  '200px': '200px',
-  '320px': '320px',
-  '360px': '360px',
+// インクリメントによる自動設定
+const MIN_HEIGHT      = 0    // 最小値
+const MAX_HEIGHT      = 400  // 最大値
+const INCREMENTS_NUM  = 1    // インクリメント
+let incrementsObj = createIncrementsObj()
+
+// インクリメント以外の設定
+const OTHER_OBJ = {
+  'auto'   : 'auto',
+  'full'   : '100%',
+  'screen' : '100vh',
 }
+// アサイン
+let height =  Object.assign(incrementsObj, OTHER_OBJ);
+
+// 自動生成
+function createIncrementsObj() {
+  let obj = {}
+  let i = MIN_HEIGHT
+  while(MAX_HEIGHT >= i) {
+    if(i % INCREMENTS_NUM == 0) {
+      let key = `${i}px`
+      let val = `${i}px`
+      obj[key] = val
+    } 
+    i++
+  }
+  return obj
+}
+
+module.exports = height

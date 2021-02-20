@@ -1,37 +1,60 @@
-module.exports = {
-  '1px': '1px',
-  '2px': '2px',
-  '3px': '3px',
-  '4px': '4px',
-  '5px': '5px',
-  '6px': '6px',
-  '7px': '7px',
-  '8px': '8px',
-  '9px': '9px',
-  '10px': '10px',
-  '12px': '12px',
-  '16px': '16px',
-  '20px': '20px',
-  '24px': '24px',
-  '28px': '28px',
-  '32px': '32px',
-  '36px': '36px',
-  '40px': '40px',
-  '44px': '44px',
-  '48px': '48px',
-  '52px': '52px',
-  '56px': '56px',
-  '60px': '60px',
-  '64px': '64px',
-  '68px': '68px',
-  '72px': '72px',
-  '76px': '76px',
-  '80px': '80px',
-  '84px': '84px',
-  '88px': '88px',
-  '92px': '92px',
-  '96px': '96px',
-  '100px': '100px',
-  '320px': '320px',
-  '360px': '360px',
+// インクリメントによる自動設定
+const MIN_WIDTH       = 0    // 最小値
+const MAX_WIDTH       = 400  // 最大値
+const INCREMENTS_NUM  = 1    // インクリメント
+let incrementsObj = createIncrementsObj()
+
+// インクリメント以外の設定
+const OTHER_OBJ = {
+  'auto'   : 'auto',
+  'full'   : '100%',
+  'screen' : '100vw',
+  'min'    : 'min-content',
+  'max'    : 'max-content',
+  '1/2'    : '50%',
+  '1/3'    : '33.333333%',
+  '2/3'    : '66.666667%',
+  '1/4'    : '25%',
+  '2/4'    : '50%',
+  '3/4'    : '75%',
+  '1/5'    : '20%',
+  '2/5'    : '40%',
+  '3/5'    : '60%',
+  '4/5'    : '80%',
+  '1/6'    : '16.666667%',
+  '2/6'    : '33.333333%',
+  '3/6'    : '50%',
+  '4/6'    : '66.666667%',
+  '5/6'    : '83.333333%',
+  '1/12'   : '8.333333%',
+  '2/12'   : '16.666667%',
+  '3/12'   : '25%',
+  '4/12'   : '33.333333%',
+  '5/12'   : '41.666667%',
+  '6/12'   : '50%',
+  '7/12'   : '58.333333%',
+  '8/12'   : '66.666667%',
+  '9/12'   : '75%',
+  '10/12'  : '83.333333%',
+  '11/12'  : '91.666667%',
 }
+
+// アサイン
+let width =  Object.assign(incrementsObj, OTHER_OBJ);
+
+// 自動生成
+function createIncrementsObj() {
+  let obj = {}
+  let i = MIN_WIDTH
+  while(MAX_WIDTH >= i) {
+    if(i % INCREMENTS_NUM == 0) {
+      let key = `${i}px`
+      let val = `${i}px`
+      obj[key] = val
+    } 
+    i++
+  }
+  return obj
+}
+
+module.exports = width
