@@ -1,5 +1,5 @@
 import Link from 'next/link'
-// import s from '../sass/modules/layouts/Header.module.sass'
+// import s from '~/sass/modules/layouts/Header.module.sass'
 
 const navItems = [
   {name: 'HOME', url: '/'},

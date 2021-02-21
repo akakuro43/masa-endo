@@ -1,12 +1,12 @@
 import React from 'react'
 // import { NextPage } from 'next'
 
-import s from '~/sass/modules/pages/Home.module.sass'
-import { Head } from '../components/utils/Head'
+import s from '~/sass/pages/Home.module.sass'
+import { Head } from '../modules/utils/Head'
 import Link from 'next/link'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../modules/layouts/Header'
+import Footer from '../modules/layouts/Footer'
 
 export default function Home({ article }) {
 

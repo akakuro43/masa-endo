@@ -1,7 +1,7 @@
-import s from '~/sass/modules/pages/ArticleSingle.module.sass'
+import s from '~/sass/pages/ArticleSingle.module.sass'
 import Head from 'next/head'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import Header from '../../modules/layouts/Header'
+import Footer from '../../modules/layouts/Footer'
 
 export default function ArtivleId({ article }) {
   const formatDate = (dateStr) => {
