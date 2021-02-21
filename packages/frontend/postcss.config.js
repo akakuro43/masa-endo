@@ -1,13 +1,7 @@
-// module.exports = {
-//   plugins: {
-//     tailwindcss: { config: './tailwind.config.js' },
-//     autoprefixer: {},
-//   }
-// }
 const plugins ={
   tailwindcss: {},
   autoprefixer: {}
-};
+}
 
 if(process.env.NODE_ENV === 'production') {
   plugins.cssnano = {};
@@ -15,4 +9,4 @@ if(process.env.NODE_ENV === 'production') {
 
 module.exports = {
   plugins: plugins
-};
+}

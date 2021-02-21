@@ -1,17 +1,11 @@
 const theme = require('./tailwind-theme/index')
 
 module.exports = {
-  purge: {
-    content: [
-      './src/components/**/*.tsx',
-      './src/pages/**/*.tsx',
-      './src/sass/*.sass',
-    ],
-    options: {
-      safelist: ["html", "body"],
-    }
-  },
-  darkMode: false,
+  purge: [
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/sass/*.sass',
+  ],
   theme,
   variants: {},
   plugins: [],
