@@ -1,4 +1,4 @@
-// import s from '~/sass/modules/layouts/Footer.module.sass'
+// import s from '~/style/layouts/Footer.module.sass'
 
 const Footer = () => (
   <footer className={`h-100px relative z-10 w-full`}>

@@ -1,19 +1,25 @@
-import s from '~/sass/pages/ArticleSingle.module.sass'
+import s from '~/style/component/ArticleSingle.module.sass'
 import Head from 'next/head'
-import Header from '../../modules/layouts/Header'
-import Footer from '../../modules/layouts/Footer'
+// import Header from '../../modules/layouts/Header'
+// import Footer from '../../modules/layouts/Footer'
+import TransitionWrapper from '~/modules/layouts/TransitionWrapper.tsx'
 
 export default function ArtivleId({ article }) {
   const formatDate = (dateStr) => {
     return dateStr.substr(0, 10).split('-').join('.')
   }
   return (
-    <div>
+    <TransitionWrapper
+      pageName='detail'
+      wrapperVariants={{
+        initial: { y: '-25px', opacity: 0 },
+        enter: { y: '0', opacity: 1, transition: { duration: 0.7, ease: [0.19, 0.82, 0.27, 1], delay: 0.1 } },
+        exit: { y: '10px', opacity: 0, transition: { duration: 0.2 } },
+      }}>
       <Head>
          <title>Create Next App</title>
          <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
       <section className={`${s.pArticle} pt-144px pb-80px`}>
         <div className="pj-innerSlim">
           <div className={`${s.articleHeader} relative`}>
@@ -54,8 +60,7 @@ export default function ArtivleId({ article }) {
           </div>
         </div>
       </section>
-      <Footer/>
-    </div>
+    </TransitionWrapper>
   );
 }
 

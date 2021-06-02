@@ -1,12 +1,13 @@
 import React from 'react'
 // import { NextPage } from 'next'
 
-import s from '~/sass/pages/Home.module.sass'
+import s from '~/style/component/Home.module.sass'
 import { Head } from '../modules/utils/Head'
 import Link from 'next/link'
+import TransitionWrapper from '~/modules/layouts/TransitionWrapper'
 
-import Header from '../modules/layouts/Header'
-import Footer from '../modules/layouts/Footer'
+// import Header from '../modules/layouts/Header'
+// import Footer from '../modules/layouts/Footer'
 
 export default function Home({ article }) {
 
@@ -15,10 +16,15 @@ export default function Home({ article }) {
   }
 
   return (
-    <div>
+    <TransitionWrapper
+      pageName='top'
+      wrapperVariants={{
+        initial: { y: '-25px', opacity: 0 },
+        enter: { y: '0', opacity: 1, transition: { duration: 0.7, ease: [0.19, 0.82, 0.27, 1], delay: 0.1 } },
+        exit: { y: '10px', opacity: 0, transition: { duration: 0.2 } },
+      }}>
       <Head></Head>
-      <Header />
-      <section className={`${s.pKeyVisual} w-full relative h-360px`}>
+      <section className={`${s.pKeyVisual} w-full relative h-[360px]`}>
         <div className={`inset-0 absolute z-10 flex flex-col justify-center`}>
           <h1 className={`text-40px font-en text-center font-bold text-off-white`}>Masa-Endo</h1>
           <p className={`font-en text-center font-medium opacity-80 text-gray`}>Develop, Software Engineering, EM, Tech</p>
@@ -54,8 +60,7 @@ export default function Home({ article }) {
           </ul>
         </div>
       </section>
-      <Footer/>
-    </div>
+    </TransitionWrapper>
   );
 }
 
